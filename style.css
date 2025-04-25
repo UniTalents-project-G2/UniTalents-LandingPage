@@ -151,4 +151,62 @@
     font-size: 1rem;
     color: #1C1F2B;
   }
+
+   /*SUCCESS-STORIES SECTION*/
+
+   .success-stories {
+    scroll-margin-top: 10rem;
+    text-align: center;
+    padding: 4rem 3rem;
+    margin: 4rem;
+    background-color: #F5F0E6;
+  }
+  
+  .success-stories h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 4rem;
+    color: #1C1F2B;
+    margin-bottom: 7rem;
+  }
+  
+  .stories-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+  }
+  
+  .story {
+    background-color: white;
+    border: 1.5px solid #1C1F2B;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .story img {
+    width: 180px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .quote {
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .name {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    color: #111827;
+  }
+  
+  .role {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+  }
   
