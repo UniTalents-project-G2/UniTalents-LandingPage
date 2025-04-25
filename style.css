@@ -210,3 +210,103 @@
     color: #555;
   }
   
+    /*MEMBERS*/
+
+    .members {
+      scroll-margin-top: 10rem;
+      text-align: center;
+      padding: 4rem 3rem;
+      margin: 4rem;
+      background-color: #F5F0E6;
+    }
+  
+    .members h2{
+      font-family: "Inter", sans-serif;
+      font-size: 4rem;
+      color: #1C1F2B;
+      margin-bottom: 7rem;
+    }
+  
+    .teamMembers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  
+    .person {
+      background-color: white;
+      border: 1.5px solid #1C1F2B;
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    
+    .person p {
+      font-family: "Nunito", sans-serif;
+      font-size: 2rem;
+      color: #1C1F2B;
+    }
+  
+    .person img {
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+    }
+  
+    /*FAQs*/
+    .faqs {
+      scroll-margin-top: 10rem;
+      text-align: center;
+      padding: 4rem 3rem;
+      margin: 4rem;
+      background-color: #F5F0E6;
+    }
+    
+    .faqs h2 {
+      font-family: "Inter", sans-serif;
+      font-size: 4rem;
+      color: #1C1F2B;
+      margin-bottom: 5rem;
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .faq-container details {
+      background-color: white;
+      border: 1.5px solid #1C1F2B;
+      border-radius: 8px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .faq-container summary {
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+      font-size: 1.1rem;
+      list-style: none;
+      outline: none;
+    }
+    
+    .faq-container summary::marker {
+      display: none;
+    }
+    
+    .faq-container p {
+      margin-top: 1rem;
+      font-family: "Nunito", sans-serif;
+      padding: 1rem;
+      background-color: #111827;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+      color: white;
+    }
