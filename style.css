@@ -310,3 +310,115 @@
       font-weight: 500;
       color: white;
     }
+
+  /*Footer*/
+  .footer {
+    width: 100%;
+    background: #1C1F2B;
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .socialIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: #F5F0E6;
+    font-size: 2rem;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menuFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px 0;
+    gap: 20px;
+    flex-wrap: wrap; 
+  }
+  
+  .footerElem {
+    list-style: none;
+  }
+  
+  .menu-icon {
+    color: #F5F0E6;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 0;
+    opacity: 0.75;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1; 
+  }
+  
+  .footer p {
+    color: #F5F0E6;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 20px;
+  }
+
+  /*Escondemos el botón de menú en pantallas grandes*/
+  .open-menu {
+    display: none;
+  }
+
+  /*Responsive*/
+
+  @media (max-width: 1270px) {
+    .container-head {
+      flex-direction: column;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .menu-horizontal {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+      gap: 0px;
+      display: none; /* Escondemos el menú por defecto */
+    }
+  
+    .menu-horizontal.menu_opened {
+      display: flex; /* Mostramos el menú cuando está abierto */
+    }
+  
+    .open-menu {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      align-self: flex-start; /* Alineamos el botón a la izquierda */
+    }
+}
