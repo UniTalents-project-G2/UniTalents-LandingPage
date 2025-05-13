@@ -383,6 +383,29 @@
     margin: 1rem 0;
     font-size: 20px;
   }
+  
+  /*Internacionalizacion*/
+
+  .language-toggle {
+    margin-left: 1rem;
+  }
+  
+  .lang-btn {
+    background-color: transparent;
+    border: 2px solid #F5F0E6;
+    color: #F5F0E6;
+    font-family: "Nunito", sans-serif;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .lang-btn:hover {
+    background-color: #F5F0E6;
+    color: #1C1F2B;
+  }
+  
 
   /*Escondemos el botón de menú en pantallas grandes*/
   .open-menu {
