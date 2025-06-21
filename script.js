@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // MENU HAMBURGUESA
   const menu = document.querySelector(".menu-horizontal");
   const openMenuBtn = document.querySelector(".open-menu");
 
@@ -9,21 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   openMenuBtn.addEventListener("click", toggleMenu);
 
-  // INTERNACIONALIZACIÓN
   const langButton = document.getElementById('langToggle');
 
   langButton.addEventListener('click', () => {
     const isEnglish = langButton.innerText === 'EN';
     langButton.innerText = isEnglish ? 'ES' : 'EN';
 
-    // HEADER
-    document.querySelectorAll('a[href="#funcionamiento"]')[0].innerText = isEnglish ? 'How it works?' : '¿Cómo funciona?';
-    document.querySelectorAll('a[href="#casos-exito"]')[0].innerText = isEnglish ? 'Success Stories' : 'Casos de Éxito';
-    document.querySelectorAll('a[href="#preguntas"]')[0].innerText = isEnglish ? 'FAQs' : 'FAQs';
-    document.querySelectorAll('a[href="#integrantes"]')[0].innerText = isEnglish ? 'Team' : 'Integrantes';
-    document.querySelectorAll('a[href="https://mango-smoke-08693ef10.6.azurestaticapps.net"]')[0].innerText = isEnglish ? 'Login' : 'Acceder';
+    // Header
+    const links = document.querySelectorAll('nav.topheader a');
+    if (links.length >= 4) {
+      links[0].innerText = isEnglish ? 'How it works?' : '¿Cómo funciona?';
+      links[1].innerText = isEnglish ? 'Success Stories' : 'Casos de Éxito';
+      links[2].innerText = isEnglish ? 'FAQs' : 'FAQs';
+      links[3].innerText = isEnglish ? 'Team' : 'Integrantes';
+    }
 
-    // HERO
+    const loginLink = document.querySelector('nav.topheader a[href^="https"]');
+    if (loginLink) loginLink.innerText = isEnglish ? 'Login' : 'Acceder';
+
+    // Hero
     const title = document.querySelector('.hero-content h1');
     if (title) {
       title.innerHTML = isEnglish
@@ -36,11 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ctaBtn.innerText = isEnglish ? "Sign up" : "Regístrate";
     }
 
-    // CÓMO FUNCIONA
-    const howItWorksTitle = document.querySelector('.how-it-works h2');
-    if (howItWorksTitle) {
-      howItWorksTitle.innerText = isEnglish ? "How it works?" : "¿Cómo funciona?";
-    }
+    // Cómo funciona
+    const howTitle = document.querySelector('.how-it-works h2');
+    if (howTitle) howTitle.innerText = isEnglish ? "How it works?" : "¿Cómo funciona?";
 
     const stepTitles = document.querySelectorAll('.step h3');
     const stepTexts = document.querySelectorAll('.step p');
@@ -51,21 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
       "Collaborate and learn",
       "Boost your career"
     ];
-
     const stepTitlesEs = [
       "Descubre proyectos",
       "Construye tu portafolio",
       "Colabora y aprende",
       "Impulsa tu carrera"
     ];
-
     const stepTextsEn = [
       "Explore new opportunities in different areas",
       "Showcase your skills and achievements",
       "Gain experience in the job field",
       "Gain visibility and expand your professional network"
     ];
-
     const stepTextsEs = [
       "Explora nuevas oportunidades en nuevas áreas",
       "Muestra tus habilidades y logros",
@@ -73,23 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       "Gana visibilidad y expande tu red profesional"
     ];
 
-    stepTitles.forEach((el, i) => {
-      el.innerText = isEnglish ? stepTitlesEn[i] : stepTitlesEs[i];
-    });
+    stepTitles.forEach((el, i) => el.innerText = isEnglish ? stepTitlesEn[i] : stepTitlesEs[i]);
+    stepTexts.forEach((el, i) => el.innerText = isEnglish ? stepTextsEn[i] : stepTextsEs[i]);
 
-    stepTexts.forEach((el, i) => {
-      el.innerText = isEnglish ? stepTextsEn[i] : stepTextsEs[i];
-    });
-
-    // CASOS DE ÉXITO
+    // Casos de éxito
     const successTitle = document.querySelector('.success-stories h2');
-    if (successTitle) {
-      successTitle.innerText = isEnglish ? "Success Stories" : "Casos de éxito";
-    }
+    if (successTitle) successTitle.innerText = isEnglish ? "Success Stories" : "Casos de éxito";
 
     const quotes = document.querySelectorAll('.quote');
     const roles = document.querySelectorAll('.role');
-
     if (quotes.length >= 2 && roles.length >= 2) {
       quotes[0].innerText = isEnglish
         ? "UniTalents connected me with a fintech for a real project. Now I have an internship thanks to that experience."
@@ -108,11 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
         : "Gerente de Operaciones, QLab Perú";
     }
 
-    // FAQS
+    // FAQs
     const faqsTitle = document.querySelector('.faqs h2');
-    if (faqsTitle) {
-      faqsTitle.innerText = isEnglish ? "Frequently Asked Questions" : "Preguntas frecuentes";
-    }
+    if (faqsTitle) faqsTitle.innerText = isEnglish ? "Frequently Asked Questions" : "Preguntas frecuentes";
 
     const faqQuestions = document.querySelectorAll('.faq-container summary');
     const faqAnswers = document.querySelectorAll('.faq-container p');
@@ -123,21 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
       "Is there a cost to use UniTalents?",
       "What is the hiring process like?"
     ];
-
     const questionsEs = [
       "¿Quiénes pueden postular a los proyectos?",
       "¿Qué tipo de proyectos se publican?",
       "¿Tiene algún costo usar UniTalents?",
       "¿Cómo es el proceso de contratación?"
     ];
-
     const answersEn = [
       "All students registered on the platform with a verified profile and an active portfolio.",
       "Real projects from companies seeking young talent for innovation, development, design, and more.",
       "For students, the platform is completely free. Companies pay to post and validate talent.",
       "Companies select applicants, rate their performance, and may hire directly through the platform."
     ];
-
     const answersEs = [
       "Todos los estudiantes registrados en la plataforma con un perfil verificado y un portafolio activo.",
       "Se publican proyectos reales de empresas que buscan talento joven para innovación, desarrollo, diseño y más.",
@@ -145,21 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
       "Las empresas seleccionan postulantes, califican su desempeño y pueden contratar directamente desde la plataforma."
     ];
 
-    faqQuestions.forEach((el, i) => {
-      el.innerText = isEnglish ? questionsEn[i] : questionsEs[i];
-    });
+    faqQuestions.forEach((el, i) => el.innerText = isEnglish ? questionsEn[i] : questionsEs[i]);
+    faqAnswers.forEach((el, i) => el.innerText = isEnglish ? answersEn[i] : answersEs[i]);
 
-    faqAnswers.forEach((el, i) => {
-      el.innerText = isEnglish ? answersEn[i] : answersEs[i];
-    });
-
-    // INTEGRANTES
+    // Integrantes
     const membersTitle = document.querySelector('.members h2');
-    if (membersTitle) {
-      membersTitle.innerText = isEnglish ? "Team Members" : "Integrantes";
-    }
+    if (membersTitle) membersTitle.innerText = isEnglish ? "Team Members" : "Integrantes";
 
-    // FOOTER
+    // Footer
     const footerLinks = document.querySelectorAll('.menuFooter .footerElem a');
     const footerTextsEn = [
       "Home",
@@ -177,10 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "Integrantes",
       "Acceder"
     ];
-
-    footerLinks.forEach((el, i) => {
-      el.innerText = isEnglish ? footerTextsEn[i] : footerTextsEs[i];
-    });
+    footerLinks.forEach((el, i) => el.innerText = isEnglish ? footerTextsEn[i] : footerTextsEs[i]);
 
     const copyright = document.querySelector('.footer .text');
     if (copyright) {
