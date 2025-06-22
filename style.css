@@ -152,6 +152,22 @@
     color: #1C1F2B;
   }
 
+  /*Section About The Team*/
+
+  .aboutTheTeam{
+    padding: 4rem;
+    text-align: center;
+  }
+
+  .aboutTheTeam h2{
+    font-family: "Inter", sans-serif;
+    font-size: 4rem;
+  }
+
+  .video-container{
+    margin: 3rem;
+  }
+
    /*SUCCESS-STORIES SECTION*/
 
    .success-stories {
@@ -411,6 +427,13 @@
   .open-menu {
     display: none;
   }
+
+
+  
+
+
+
+
 
   /*Responsive*/
 
