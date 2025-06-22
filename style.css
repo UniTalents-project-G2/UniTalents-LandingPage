@@ -445,3 +445,42 @@
       align-self: flex-start; /* Alineamos el botón a la izquierda */
     }
 }
+
+
+.access-button {
+    background-color: #facc15;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.access-link {
+    color: #1C1F2B !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.access-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.access-button:hover .access-link {
+    color: #1C1F2B !important;
+    background-color: transparent !important;
+}
+
+/* Para la versión móvil */
+@media (max-width: 1270px) {
+    .access-button {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .access-link {
+        justify-content: center;
+    }
+}
