@@ -421,4 +421,29 @@
       cursor: pointer;
       align-self: flex-start; /* Alineamos el botón a la izquierda */
     }
+
+
+  }
+
+
+  @media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .cta-button {
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
